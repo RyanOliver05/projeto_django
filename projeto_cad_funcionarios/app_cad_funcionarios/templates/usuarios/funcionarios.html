@@ -1,0 +1,22 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+<div class="container">
+    <h1>Funcionarios cadastrados</h1>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>id</th>
+            <th>nome</th>
+            <th>cargo</th>
+            
+        </tr>
+        {% for funcionario in funcionarios%}
+        <tr>
+            <td>{{funcionario.id_funcionario}}</td>
+            <td>{{funcionario.nome}}</td>
+            <td>{{funcionario.cargo}}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
